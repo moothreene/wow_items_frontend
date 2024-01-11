@@ -1,0 +1,116 @@
+.item_container{
+    margin:1em;
+}
+
+.item_name{
+    white-space: nowrap;
+}
+
+.item_bond{
+    white-space: nowrap;
+}
+
+.inventory{
+    display: flex;
+    justify-content: space-between;
+}
+
+.inventory > *{
+    display: inline-block;
+}
+
+.damage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.damage > *{
+    display: inline-block;
+}
+
+.item_effect >*{
+    display: inline;
+}
+
+.item_tooltip{
+    position: absolute;
+    top: -1em;
+    background-color: rgb(8 13 33);
+    color:white;
+    min-width: 5em;
+    width: fit-content;
+    max-width: 21em;
+    padding: .5em;
+    display: none;
+    margin-left: 3em;
+}
+
+.item_tooltip.medium{
+    min-width: 23em;
+}
+
+
+.image_container:hover .item_tooltip{
+    display: block;
+}
+
+.image_container{
+    position: relative;
+    width: fit-content;
+}
+
+
+
+.item_effect{
+    color:lawngreen;
+    margin-right: 1em;
+}
+
+.item_image{
+    box-sizing: border-box;
+    box-shadow: 0px 0px 0px 3px;
+    border-radius: 15%;
+}
+
+.junk{
+    color:gray;
+    border-color:gray;
+}
+
+.uncommon{
+    color:lawngreen;
+    border-color:lawngreen
+}
+
+.rare{
+    color:royalblue;
+    border-color:royalblue;
+}
+
+.epic{
+    color:darkviolet;
+    border-color:darkviolet;
+}
+
+.legendary{
+    color:orange;
+    border-color:orange;
+}
+
+.item_level{
+    color:gold;
+}
+
+.set_name_items{
+    color:gold;
+}
+
+.set_item{
+    margin-left:.3em;
+    color:gray;
+}
+
+.set_effects{
+    margin-top: .5em;
+    color:gray;
+}
