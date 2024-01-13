@@ -3,7 +3,24 @@ import "./Item.css"
 
 export default function Item(props){
     const item = props.item.image;
-    const path =`./images/${item}`;   
+    const path =`./images/${item}`;
+    const speed = props.item.speed!=undefined?+props.item.speed.replace(",","."):0.0;
+    const quality_modifier = props.item.quality_modifier!=undefined?+props.item.quality_modifier.replace(",","."):0.0;
+    if(quality_modifier>0) console.log(true);
+
+    function damage_quality(){
+        const damage_min = props.item.damage_min;
+        const damage_max = props.item.damage_max;
+        let dps = (damage_max+damage_min)/(2*speed);
+        let dps_updated = dps+quality_modifier;
+        let damage_min_updated = ((dps_updated*2*speed)-(damage_max-damage_min))/2;
+        let damage_max_updated = (dps_updated*2*speed)-damage_min_updated;
+        return({
+            "min":Math.round(damage_min_updated),
+            "max":Math.round(damage_max_updated),
+            "dps":dps_updated.toFixed(2)
+        })
+    }
   return (
     <div class="item_container">
         <div class="image_container">
@@ -21,25 +38,22 @@ export default function Item(props){
                         </div>
                     }
                     <div class="inventory">
-                        <div class="slot">{props.item.inventory_type}</div>
-                        {
-                            props.item.subclass!="miscellaneous" &&
-                            <div class="type">{props.item.subclass}</div>
-                        }
+                        <div class="slot">{props.localization[props.item.inventory_type]}</div>
+                            <div class="type">{props.localization[props.item.subclass]}</div>
                     </div>
                     {
                         props.item.damage_min > 0 &&
                         <div class="weapon">
                             <div class="damage">
-                                <div class="minmax">{props.item.damage_min}-{props.item.damage_max} Damage</div>
-                                <div class="speed">Speed {props.item.speed}</div>
+                                <div class="minmax">{damage_quality()["min"]} - {damage_quality()["max"]} Damage</div>
+                                <div class="speed">Speed {speed.toFixed(2)}</div>
                             </div>
-                            <div class="dps">{}</div>
+                            <div class="dps">{damage_quality()["dps"]}</div>
                         </div>
                     }
                     {
                         props.item.armor > 0 &&
-                        <div class="armor">{props.item.armor} armor</div>
+                        <div class={`armor${quality_modifier!=0?" quality":""}`}>{props.item.armor + quality_modifier} armor</div>
                     }
                     {
                         props.item.subclass=="shield" &&
@@ -231,7 +245,7 @@ export default function Item(props){
                     {
                         props.item.set_id !=0 &&
                         <div class = "item_set">
-                            <div class = "set_name_items">{props.item.set_name}</div>
+                            <div class = "set_name_items">{`${props.item.set_name} (0/${props.item.set_item_count})`}</div>
                                 {
                                 props.item.set_item_id_0 != 0 &&
                                 <div class="set_item">

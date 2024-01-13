@@ -20,12 +20,17 @@
 }
 
 .damage{
+    white-space: nowrap;
     display: flex;
     justify-content: space-between;
 }
 
 .damage > *{
     display: inline-block;
+}
+
+.speed{
+    margin-left: 1em;
 }
 
 .item_effect >*{
@@ -113,4 +118,16 @@
 .set_effects{
     margin-top: .5em;
     color:gray;
+}
+
+.durability{
+    white-space: nowrap;
+}
+
+.req_level{
+    white-space: nowrap;
+}
+
+.armor.quality{
+    color:lawngreen;
 }
