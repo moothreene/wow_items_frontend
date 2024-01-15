@@ -6,7 +6,7 @@ export default function Item(props){
     const path =`./images/${item}`;
     const speed = props.item.speed!=undefined?+props.item.speed.replace(",","."):0.0;
     const quality_modifier = props.item.quality_modifier!=undefined?+props.item.quality_modifier.replace(",","."):0.0;
-    if(quality_modifier>0) console.log(true);
+    console.log(props.item.class_available)
 
     function damage_quality(){
         const damage_min = props.item.damage_min;
@@ -25,7 +25,7 @@ export default function Item(props){
     <div class="item_container">
         <div class="image_container">
             <img class={`item_image ${props.item.quality}`} src={"/img?src="+item} alt="React Logo" />
-            <div class={`item_tooltip ${props.item.spell_1!=0?"medium":"small"}`}>
+            <div class={`item_tooltip ${props.item.spell_1!=0?"medium":props.item.set_id!=0?"medium":"small"}`}>
                     <div class={`item_name ${props.item.quality}`}>{props.item.name}</div>
                     <div class="item_level">Item Level {props.item.item_level}</div>
                     {
@@ -181,6 +181,25 @@ export default function Item(props){
                     {
                         props.item.durability > 0 &&
                         <div class="durability">Durability {props.item.durability}/{props.item.durability}</div>
+                    }
+                    {
+                        props.item.class_available > 0 &&
+                        <div class="classes_available">{"Classes: "}
+                            {
+                                props.item.class_available.toString().split("").map((class_id,i,arr)=>{
+                                    return(
+                                        <>
+                                        <span class={`class_available ${props.classid[class_id]}`}>
+                                            {props.classid[class_id].charAt(0).toUpperCase() + props.classid[class_id].slice(1)}
+                                        </span>
+                                        {arr.length - 1 != i &&
+                                            <span>, </span>
+                                        }
+                                        </>
+                                    )
+                                })
+                            }
+                        </div>
                     }
                     {
                         props.item.required_level > 0 &&

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react'
 import Item from './Item';
 import "./App.css"
 import itemLocalization from "./ItemLocalisation.json";
+import classId from "./Class_id.json";
 function App() {
   const [backendData, setBackendData] = useState([{}]);
   useEffect(()=>{
@@ -85,7 +86,7 @@ function App() {
         </form>
         {backendData.map((itemData)=>{
           return(
-            <Item item = {itemData} localization = {itemLocalization} />
+            <Item item = {itemData} localization = {itemLocalization} classid = {classId}/>
           )
         })}
     </div>

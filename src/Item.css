@@ -107,7 +107,12 @@
 }
 
 .set_name_items{
+    white-space: nowrap;
     color:gold;
+}
+
+.item_set{
+    margin-top: 1em;
 }
 
 .set_item{
@@ -116,7 +121,7 @@
 }
 
 .set_effects{
-    margin-top: .5em;
+    margin-top: 1em;
     color:gray;
 }
 
@@ -130,4 +135,40 @@
 
 .armor.quality{
     color:lawngreen;
+}
+
+.warrior{
+    color:rgb(198, 155, 109);
+}
+
+.paladin{
+    color:rgb(244, 140, 187);
+}
+
+.hunter{
+    color:rgb(171, 211, 114);
+}
+
+.rogue{
+    color:rgb(255, 244, 104);
+}
+
+.priest{
+    color:rgb(255, 255, 255);
+}
+
+.druid{
+    color:rgb(255, 124, 10);
+}
+
+.shaman{
+    color:rgb(0, 112, 221);
+}
+
+.mage{
+    color:rgb(63, 198, 235);
+}
+
+.warlock{
+    color:rgb(135, 137, 238);
 }
