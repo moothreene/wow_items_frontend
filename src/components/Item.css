@@ -1,5 +1,5 @@
 .item_container{
-    margin:1em;
+    margin: .3em;
 }
 
 .item_name{
@@ -39,7 +39,8 @@
 
 .item_tooltip{
     position: absolute;
-    top: -1em;
+    top:-5em;
+    z-index:3;
     background-color: rgb(8 13 33);
     color:white;
     min-width: 5em;
@@ -171,4 +172,9 @@
 
 .warlock{
     color:rgb(135, 137, 238);
+}
+
+.random_enchantment{
+    white-space: nowrap;
+    color:lawngreen;
 }
