@@ -1,0 +1,19 @@
+{
+    "head":{"image":"inventoryslot_head.jpg","name":"default"},
+    "neck":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "shoulder":{"image":"inventoryslot_shoulder.jpg","name":"default"},
+    "back":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "chest":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "wrist":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "hands":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "waist":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "legs":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "feet":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "ring_1":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "ring_2":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "trinket_1":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "trinket_2":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "weapon_1":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "weapon_2":{"image":"inventoryslot_neck.jpg","name":"default"},
+    "misc":{"image":"inventoryslot_neck.jpg","name":"default"}
+}

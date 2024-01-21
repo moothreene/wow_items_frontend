@@ -3,4 +3,17 @@
 }
 
 .column.right{
+    width: 30%;
+}
+
+.column.left{
+    width: 30%;
+}
+
+.inventory{
+    display: inline;
+}
+
+.is_leaving{
+    bottom: 2em;
 }

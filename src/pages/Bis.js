@@ -1,13 +1,16 @@
 import React, {useEffect, useState} from 'react'
 import Inventory from '../components/Inventory';
 import Specs from '../components/Specs';
+import icons_default from "../data/Icons_default";
 import "./Bis.css"
 import classBis from "../data/Class_bis.json";
 function Bis() {
-  const [backendData, setBackendData] = useState({});
+  const [backendData, setBackendData] = useState(icons_default);
   const [classSelected, setClassSelected] = useState("");
+  const [loading, setLoading] = useState(true);
 
   async function handleSubmit(e){
+    setLoading(true);
     e.preventDefault(e);
     const form = e.target;
     const formData = new FormData(form);
@@ -24,9 +27,8 @@ function Bis() {
         data=>{
           setBackendData(backendData =>({...backendData,[key]:data}))
         }
-      )
+      ).then(setLoading(false));
     }
-    return
   }
 
   let tooltip = document.getElementsByClassName("item_tooltip");
@@ -76,10 +78,8 @@ function Bis() {
             <button type="submit">Submit</button>
           </form>
       </div>
-      {
-        Object.keys(backendData).length === 17 &&
-        <Inventory inventory={backendData}></Inventory>
-      }
+      < br></br>
+        <Inventory inventory={backendData} loading={loading}></Inventory>
     </>
   )
 }

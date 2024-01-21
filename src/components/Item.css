@@ -2,6 +2,10 @@
     margin: .3em;
 }
 
+.is_leaving{
+    bottom: 2em;
+}
+
 .item_name{
     white-space: nowrap;
 }
@@ -38,8 +42,7 @@
 }
 
 .item_tooltip{
-    position: absolute;
-    top:-5em;
+    position: fixed;
     z-index:3;
     background-color: rgb(8 13 33);
     color:white;
@@ -47,7 +50,8 @@
     width: fit-content;
     max-width: 21em;
     padding: .5em;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     margin-left: 3em;
 }
 
@@ -57,11 +61,11 @@
 
 
 .image_container:hover .item_tooltip{
-    display: block;
+    visibility: visible;
+    opacity: 100%;
 }
 
 .image_container{
-    position: relative;
     width: fit-content;
 }
 
