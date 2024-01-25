@@ -37,7 +37,7 @@ export default function Item(props){
                                 }
                                 </div>
                             }
-                            <div class="inventory">
+                            <div class="inventory_info">
                                 <div class="slot">{itemLocalization[props.item.inventory_type]}</div>
                                     <div class="type">{itemLocalization[props.item.subclass]}</div>
                             </div>
