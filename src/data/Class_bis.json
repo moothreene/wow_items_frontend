@@ -15,7 +15,26 @@
                 "ring_1":[13097],
                 "ring_2":[20439],
                 "trinket_1":[211449],
-                "trinket_2":[209612],
+                "trinket_2":[21568],
+                "mainhand":[209525],
+                "offhand":[209691],
+                "misc":[209688]
+            },
+            "tank":{
+                "head":[211510],
+                "neck":[209422],
+                "shoulder":[2264],
+                "back":[16315],
+                "chest":[211512],
+                "wrist":[15132,"Of the Monkey"],
+                "hands":[211423],
+                "waist":[6468],
+                "legs":[13114],
+                "feet":[211511],
+                "ring_1":[12008,"Of the Monkey"],
+                "ring_2":[2933],
+                "trinket_1":[211449],
+                "trinket_2":[21568],
                 "mainhand":[209525],
                 "offhand":[21568],
                 "misc":[209688]
@@ -42,7 +61,23 @@
                 "misc":[209574]
             },
             "protection":{
-                
+                "head":[209690],
+                "neck":[209673],
+                "shoulder":[209676],
+                "back":[7419,"Of the Bear"],
+                "chest":[210794],
+                "wrist":[4438],
+                "hands":[209568],
+                "waist":[211457],
+                "legs":[209566],
+                "feet":[209689],
+                "ring_1":[2933],
+                "ring_2":[6321],
+                "trinket_1":[211449],
+                "trinket_2":[21568],
+                "mainhand":[209525],
+                "offhand":[211460],
+                "misc":[209574]
             }
 
         }
