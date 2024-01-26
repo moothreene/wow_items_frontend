@@ -5,27 +5,26 @@ import "./Inventory.css";
 export default function Inventory(props){
 
     useEffect(() => {
-            let items = document.querySelectorAll('.item_image');
-            items.forEach((item)=> {
-                if(!item.classList.contains("undefined")){
-                    item.addEventListener("mouseenter",()=>{
-                        let rect = item.parentElement.querySelector(".item_tooltip").getBoundingClientRect();
-                        if(rect["bottom"] > window.innerHeight){
-                            item.parentElement.querySelector(".item_tooltip").classList.add("is_leaving");
-                        }
-                    
-                    })
-                }
-            });
-
-            items.forEach(item=> item.addEventListener("mouseleave",()=>{
-                if(!item.classList.contains("undefined")){
-                    if(item.parentElement.querySelector(".item_tooltip").classList.contains("is_leaving")){
-                        item.parentElement.querySelector(".item_tooltip").classList.remove("is_leaving");
+        let items = document.querySelectorAll('.item_image');
+        items.forEach((item)=> {
+            if(!item.classList.contains("undefined")){
+                item.addEventListener("mouseenter",()=>{
+                    let rect = item.parentElement.querySelector(".item_tooltip").getBoundingClientRect();
+                    if(rect["bottom"] > window.innerHeight){
+                        item.parentElement.querySelector(".item_tooltip").classList.add("is_leaving");
                     }
+                
+                })
+            }
+        });
+
+        items.forEach(item=> item.addEventListener("mouseleave",()=>{
+            if(!item.classList.contains("undefined")){
+                if(item.parentElement.querySelector(".item_tooltip").classList.contains("is_leaving")){
+                    item.parentElement.querySelector(".item_tooltip").classList.remove("is_leaving");
                 }
-            }));
-            console.log(props.inventory);
+            }
+        }));
             
       },[props.inventory]);
 

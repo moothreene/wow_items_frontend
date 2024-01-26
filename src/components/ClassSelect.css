@@ -1,0 +1,53 @@
+.select{
+    display: flex;
+    width: 10%;
+}
+
+.class_button img{
+    width: 3em;
+}
+
+.spec_button img{
+    width: 3em;
+}
+
+.class_button{
+    display: flex;
+    position: relative;
+    height: fit-content;
+}
+
+.spec_button{
+    display: flex;
+    position: relative;
+    height: fit-content;
+}
+
+.class_button:hover .shadow{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 7px 7px rgba(113, 227, 255, 0.464);
+    top: 0;
+    left: 0;
+}
+
+.spec_button:hover .shadow{
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset 0 0 7px 7px rgba(113, 227, 255, 0.464);
+    top: 0;
+    left: 0;
+}
+
+abbr {
+    transition:0s;
+    /* Here is the delay */
+  }
+
+.hidden{
+    display: none;
+}
