@@ -155,7 +155,11 @@ export default function Inventory(props){
                             <br></br>
                             {"desc" in props.inventory["mainhand"] && ` (${props.inventory["mainhand"]["desc"]})`}
                         </span>
-                        <span class={`item offhand ${props.inventory["offhand"]["quality"]}`}>
+                        <span class={
+                            `item offhand ${props.inventory["offhand"]["quality"]} ${
+                                props.inventory["offhand"]["id"] == props.inventory["mainhand"]["id"]?"two-hand":""
+                            }`
+                            }>  
                             <Item item={props.inventory["offhand"]} loading={props.loading}></Item>
                             {props.inventory["offhand"]["name"]!="default"&& props.inventory["offhand"]["name"]}
                             <br></br>

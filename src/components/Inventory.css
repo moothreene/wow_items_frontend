@@ -49,3 +49,8 @@
     flex-direction: column;
     text-align: center;
 }
+
+.two-hand{
+    pointer-events: none;
+    opacity: .3;
+}
