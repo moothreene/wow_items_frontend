@@ -4,6 +4,7 @@ import itemLocalization from "../ItemLocalisation.json";
 import classId from "../data/Class_id.json";
 
 export default function Item(props){
+    console.log(props.item.spell_desc_1);
         const item = props.item.image;
         const speed = props.item.speed!=undefined?+props.item.speed.replace(",","."):0.0;
         const quality_modifier = props.item.quality_modifier!=undefined?+props.item.quality_modifier.replace(",","."):0.0;
@@ -25,7 +26,7 @@ export default function Item(props){
                 <div class="image_container">
                     <img class={`item_image ${props.item.quality}`} src={require(`../images/${item}`)} alt="img" />
                     { props.item.name!="default" &&
-                    <div class={`item_tooltip ${props.item.spell_1!=0?"medium":props.item.set_id!=0?"medium":"small"}`}>
+                    <div class={`item_tooltip ${props.item.spell_desc_1 == undefined?"small":props.item.spell_desc_1.length > 30?"large":"medium"}`}>
                             <div class={`item_name ${props.item.quality}`}>{props.item.name}</div>
                             <div class="item_level">Item Level {props.item.item_level}</div>
                             {

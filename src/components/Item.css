@@ -61,8 +61,13 @@
 }
 
 .item_tooltip.medium{
-    min-width: 16em;
-    width: min(fit-content,25em);
+    min-width: 12em;
+    width: fit-content;
+}
+
+.item_tooltip.large{
+    min-width: 17em;
+    width: fit-content;
 }
 
 
