@@ -71,10 +71,13 @@
 }
 
 
+
+
 .image_container:hover .item_tooltip{
     visibility: visible;
     opacity: 100%;
 }
+
 
 .image_container{
     width: fit-content;
@@ -192,4 +195,24 @@
 .random_enchantment{
     white-space: nowrap;
     color:lawngreen;
+}
+
+.classes_available{
+    white-space: nowrap;
+}
+
+.image_container:hover .shadow{
+    top: inherit;
+    left: inherit;
+    position: fixed;
+    pointer-events: none;
+    margin: 0;
+    width: 3em;
+    height: 3em;
+    box-shadow: inset 0 0 7px 7px rgba(113, 227, 255, 0.464);
+    border-radius: .5em;
+}
+
+.image_container.undefined{
+    pointer-events: none;
 }

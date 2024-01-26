@@ -23,7 +23,8 @@ export default function Item(props){
         }
         return (
             <div class="item_container">
-                <div class="image_container">
+                <div class={`image_container ${props.item.quality}`}>
+                    <div class="shadow"></div>
                     <img class={`item_image ${props.item.quality}`} src={require(`../images/${item}`)} alt="img" />
                     { props.item.name!="default" &&
                     <div class={`item_tooltip ${props.item.spell_desc_1 == undefined?"small":props.item.spell_desc_1.length > 30?"large":"medium"}`}>
