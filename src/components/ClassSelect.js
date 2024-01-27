@@ -45,7 +45,7 @@ function ClassSelect(props) {
                             return(
                             <abbr title={spec.charAt(0).toUpperCase() + spec.slice(1)}>
                                 <div class={`spec_button ${class_name} ${spec} hidden`} onClick={()=>{handleSpecNameClick(class_name,spec)}}>
-                                    <img src={require(`../images/spec_${spec}.jpg`)}alt={spec}></img>
+                                    <img src={require(`../images/spec_${class_name}_${spec}.jpg`)}alt={spec}></img>
                                     <div class="shadow"></div>
                                 </div>
                             </abbr>
