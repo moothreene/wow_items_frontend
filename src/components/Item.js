@@ -21,6 +21,11 @@ export default function Item(props){
                 "dps":dps_updated.toFixed(2)
             })
         }
+        try{
+            let someth = require(`../images/${item}`);
+        }catch(error){
+            console.log(item)
+        }
         return (
             <div class="item_container">
                 <div class={`image_container ${props.item.quality}`}>
@@ -50,7 +55,7 @@ export default function Item(props){
                                         <div class="minmax">{damage_quality()["min"]} - {damage_quality()["max"]} Damage</div>
                                         <div class="speed">Speed {speed.toFixed(2)}</div>
                                     </div>
-                                    <div class="dps">{damage_quality()["dps"]}</div>
+                                    <div class="dps">{`(${damage_quality()["dps"]} damage per second)`}</div>
                                 </div>
                             }
                             {
