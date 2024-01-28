@@ -1,0 +1,24 @@
+.navbar{
+    position: relative;
+    display: flex;
+    width: 40%;
+    height: fit-content;
+    margin: auto;
+    justify-content: end;
+}
+
+.link_container{
+    text-align: center;
+    width: 30%;
+    font-size: 2em;
+}
+
+.link_container a{
+    font-family: Metamorphous;
+    text-decoration: none;
+    color:wheat;
+}
+
+.link_container a:hover{
+    color:brown;
+}

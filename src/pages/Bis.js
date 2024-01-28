@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import Inventory from '../components/Inventory';
+import Navbar from '../components/Navbar';
 import ClassSelect from '../components/ClassSelect';
 import icons_default from "../data/Icons_default";
 import "./Bis.css"
@@ -7,10 +8,8 @@ import classBis from "../data/Class_bis.json";
 
 function Bis() {
   const [backendData, setBackendData] = useState(icons_default);
-  const [loading, setLoading] = useState(true);
 
   function loadItems(items){
-    setLoading(true);
     for(let [key, value] of Object.entries(items)){
       fetch(`/api?id=${+value[0]}`).then(
         response => response.json()
@@ -19,7 +18,7 @@ function Bis() {
           if(value.length > 1) data["desc"] = value[1];
           setBackendData(backendData =>({...backendData,[key]:data}))
         }
-      ).then(setLoading(false));
+      )
     }
   }
 
@@ -36,11 +35,14 @@ function Bis() {
 
 
   return (
-    <div class="bis">
+    <>
+      <Navbar></Navbar>
+      <div class="bis">
         <ClassSelect classBis={classBis} loadItems={loadItems}></ClassSelect>
-        <Inventory inventory={backendData} loading={loading}></Inventory>
+        <Inventory inventory={backendData}></Inventory>
 
     </div>
+    </>
   )
 }
 
