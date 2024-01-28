@@ -1,6 +1,7 @@
 .select{
     display: flex;
     width: 10%;
+    margin-left: 2em;
 }
 
 .class_button img{
