@@ -4,7 +4,6 @@ import itemLocalization from "../ItemLocalisation.json";
 import classId from "../data/Class_id.json";
 
 export default function Item(props){
-    console.log(props.item.spell_desc_1);
         const item = props.item.image;
         const speed = props.item.speed!=undefined?+props.item.speed.replace(",","."):0.0;
         const quality_modifier = props.item.quality_modifier!=undefined?+props.item.quality_modifier.replace(",","."):0.0;
@@ -20,11 +19,6 @@ export default function Item(props){
                 "max":Math.round(damage_max_updated),
                 "dps":dps_updated.toFixed(2)
             })
-        }
-        try{
-            let someth = require(`../images/${item}`);
-        }catch(error){
-            console.log(item)
         }
         return (
             <div class="item_container">
