@@ -11,7 +11,13 @@ function Bis() {
 
   function loadItems(items){
     for(let [key, value] of Object.entries(items)){
-      fetch(`/api?id=${+value[0]}`).then(
+      fetch(`/api?id=${+value[0]}`,{
+        mode:"cors",
+        method:'GET',
+        headers:{
+            'Content-type':'application/json'
+                }
+        }).then(
         response => response.json()
       ).then(
         data=>{
