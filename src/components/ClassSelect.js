@@ -37,24 +37,33 @@ function ClassSelect(props) {
                         <>
                         <abbr title={class_name.charAt(0).toUpperCase() + class_name.slice(1)}>
                             <div class="class_button" onClick={()=>{handleClassNameClick(class_name)}}>
-                                <img src={require(`../images/class_${class_name}.jpg`)} alt={class_name}></img>
-                                <div class="shadow"></div>
+                                <div class="select_class img_container">
+                                    <img class = "img_orig" src={require(`../images/class_${class_name}.jpg`)} alt={class_name}></img>
+                                    <div class="shadow"></div>
+                                </div>
+                                <img class = "border" src={require(`../images/border.png`)} alt="border"></img>        
                             </div>
                         </abbr>
                         {Object.keys(props.classBis["25"][class_name]).map((spec)=>{
                             return(
                             <abbr title={spec.charAt(0).toUpperCase() + spec.slice(1)}>
                                 <div class={`spec_button ${class_name} ${spec} hidden`} onClick={()=>{handleSpecNameClick(class_name,spec)}}>
-                                    <img src={require(`../images/spec_${class_name}_${spec}.jpg`)}alt={spec}></img>
-                                    <div class="shadow"></div>
+                                    <div class="select_spec img_container">
+                                        <img class = "img_orig" src={require(`../images/spec_${class_name}_${spec}.jpg`)}alt={spec}></img>
+                                        <div class="shadow"></div>
+                                    </div>
+                                    <img class="border" src = {require(`../images/border.png`)} alt="border"></img>
                                 </div>
                             </abbr>
                             )
                         })}
-                        <abbr title="Back">
+                        <abbr title="Back to class selection">
                             <div class={`spec_button return hidden ${class_name}`} onClick={()=>{handleSpecNameClick(class_name, undefined, true)}}>
-                                <img src={require(`../images/spec_return.jpg`)}alt="return"></img>
-                                <div class="shadow"></div>
+                                <div class="select_back img_container">
+                                    <img class="img_orig" src={require(`../images/spec_return.jpg`)}alt="return"></img>
+                                    <div class="shadow"></div>
+                                </div>
+                                <img class="border" src = {require(`../images/border.png`)} alt="border"></img>
                             </div>
                         </abbr>
                         </>

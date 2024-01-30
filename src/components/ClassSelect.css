@@ -4,21 +4,28 @@
     margin-left: 2em;
 }
 
-.class_button img{
-    width: 3em;
+.class_name.options{
+    position: relative;
 }
 
-.spec_button img{
+.img_container{
+    display: flex;
+    position: relative;
+}
+
+.img_orig{
     width: 3em;
 }
 
 .class_button{
+    margin: .4em;
     display: flex;
     position: relative;
     height: fit-content;
 }
 
 .spec_button{
+    margin: .4em;
     display: flex;
     position: relative;
     height: fit-content;
@@ -29,7 +36,8 @@
     margin: 0;
     width: 100%;
     height: 100%;
-    box-shadow: inset 0 0 7px 7px rgba(113, 227, 255, 0.464);
+    box-shadow: inset 0 0 7px 4px rgba(113, 227, 255, 0.464);
+    border-radius: 5%;
     top: 0;
     left: 0;
 }
@@ -51,4 +59,13 @@ abbr {
 
 .hidden{
     display: none;
+}
+
+.border{
+    top:-.35em;
+    left:-.35em;
+    width: 3.7em;
+    height: 3.7em;
+    position: absolute;
+    z-index: 0;
 }
