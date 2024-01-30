@@ -11,7 +11,7 @@ function Bis() {
 
   function loadItems(items){
     for(let [key, value] of Object.entries(items)){
-      fetch(`/api?id=${+value[0]}`,{
+      fetch(`https://wow-item-backend-752ca682c8fc.herokuapp.com/api?id=${+value[0]}`,{
         mode:"cors",
         method:'GET',
         headers:{
