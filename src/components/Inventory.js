@@ -5,15 +5,15 @@ import "./Inventory.css";
 export default function Inventory(props){
 
     useEffect(() => {
-        let items = document.querySelectorAll('.item_image');
+        let items = document.querySelectorAll('.image_container');
         items.forEach((item)=> {
             if(!item.classList.contains("undefined")){
                 item.addEventListener("mouseenter",()=>{
-                    item.parentElement.querySelector(".item_tooltip").classList.add("visible");
-                    let rect = item.parentElement.querySelector(".item_tooltip").getBoundingClientRect();
+                    item.querySelector(".item_tooltip").classList.add("visible");
+                    let rect = item.querySelector(".item_tooltip").getBoundingClientRect();
                     console.log(rect);
                     if(rect["bottom"] > window.innerHeight){
-                        item.parentElement.querySelector(".item_tooltip").classList.add("is_leaving_bot");
+                        item.querySelector(".item_tooltip").classList.add("is_leaving_bot");
                     }
                 
                 })
@@ -22,9 +22,9 @@ export default function Inventory(props){
 
         items.forEach(item=> item.addEventListener("mouseleave",()=>{
             if(!item.classList.contains("undefined")){
-                item.parentElement.querySelector(".item_tooltip").classList.remove("visible");
-                if(item.parentElement.querySelector(".item_tooltip").classList.contains("is_leaving_bot")){
-                    item.parentElement.querySelector(".item_tooltip").classList.remove("is_leaving_bot");
+                item.querySelector(".item_tooltip").classList.remove("visible");
+                if(item.querySelector(".item_tooltip").classList.contains("is_leaving_bot")){
+                    item.querySelector(".item_tooltip").classList.remove("is_leaving_bot");
                 }
             }
         }));
