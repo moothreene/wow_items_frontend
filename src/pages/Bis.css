@@ -24,3 +24,10 @@ select{
     width: 100%;
     appearance: none;
 }
+
+@media all and (max-width: 600px) {
+    .bis{
+        width: 95%;
+        flex-direction: column;
+    }
+}

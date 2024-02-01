@@ -22,3 +22,9 @@
 .link_container a:hover{
     color:brown;
 }
+
+@media all and (max-width: 600px) {
+    .link_container{
+        font-size: 1em;
+    }
+}

@@ -43,7 +43,7 @@ export default function Item(props){
                     <div class="shadow"></div>
                     <img class={`item_image ${props.item.quality}`} src={require(`../images/${item}`)} alt="img" />
                     { props.item.name!="default" &&
-                    <div class={`item_tooltip ${size()}`}>
+                    <div class={`item_tooltip ${size()} ${props.orientation}`}>
                             <div class={`item_name ${props.item.quality}`}>{props.item.name}</div>
                             <div class="item_level">Item Level {props.item.item_level}</div>
                             {

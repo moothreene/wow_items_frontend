@@ -54,3 +54,12 @@
     pointer-events: none;
     opacity: .3;
 }
+
+@media all and (max-width: 600px) {
+    .inventory{
+        width: 100%;
+    }
+    .item{
+        font-size: .8em;
+    }
+}

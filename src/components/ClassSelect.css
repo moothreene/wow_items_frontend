@@ -5,6 +5,8 @@
 }
 
 .class_name.options{
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
@@ -18,14 +20,14 @@
 }
 
 .class_button{
-    margin: .4em;
+    margin: .2em;
     display: flex;
     position: relative;
     height: fit-content;
 }
 
 .spec_button{
-    margin: .4em;
+    margin: .2em;
     display: flex;
     position: relative;
     height: fit-content;
@@ -68,4 +70,23 @@ abbr {
     height: 3.7em;
     position: absolute;
     z-index: 0;
+}
+
+@media all and (max-width: 600px) {
+    .class_name.options{
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .select{
+        width: 90%;
+        margin: auto;
+    }
+    .img_orig{
+        width: 1.5em;
+    }
+    .border{
+        width: 2em;
+        height: 2em;
+    }
 }
