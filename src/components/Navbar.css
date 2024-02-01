@@ -24,7 +24,11 @@
 }
 
 @media all and (max-width: 600px) {
+    .navbar{
+        width: 80%;
+    }
     .link_container{
+        width: 50%;
         font-size: 1em;
     }
 }
