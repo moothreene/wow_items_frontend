@@ -28,17 +28,6 @@ function Bis() {
     }
   }
 
-  let tooltips = document.getElementsByClassName("item_tooltip");
-  document.addEventListener("mousemove",moveTooltip,false);
-
-  function moveTooltip(e){
-    for(let i=tooltips.length; i--;){
-      let rect = tooltips[i].getBoundingClientRect();
-      tooltips[i].style["left"] = e.pageX + "px";
-      tooltips[i].style["right"] = (window.innerWidth -(e.pageX + rect["width"])) + "px";
-    }
-  }
-
 
   return (
     <>

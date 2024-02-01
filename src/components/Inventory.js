@@ -9,9 +9,15 @@ export default function Inventory(props){
         items.forEach((item)=> {
             if(!item.classList.contains("undefined")){
                 item.addEventListener("mouseenter",()=>{
+                    item.parentElement.querySelector(".item_tooltip").classList.add("visible");
                     let rect = item.parentElement.querySelector(".item_tooltip").getBoundingClientRect();
+                    console.log(rect);
                     if(rect["bottom"] > window.innerHeight){
-                        item.parentElement.querySelector(".item_tooltip").classList.add("is_leaving");
+                        item.parentElement.querySelector(".item_tooltip").classList.add("is_leaving_bot");
+                    }
+
+                    if((rect["x"]+rect["width"]) > window.innerWidth){
+                        item.parentElement.querySelector(".item_tooltip").classList.add("is_leaving_right");
                     }
                 
                 })
@@ -20,8 +26,12 @@ export default function Inventory(props){
 
         items.forEach(item=> item.addEventListener("mouseleave",()=>{
             if(!item.classList.contains("undefined")){
-                if(item.parentElement.querySelector(".item_tooltip").classList.contains("is_leaving")){
-                    item.parentElement.querySelector(".item_tooltip").classList.remove("is_leaving");
+                item.parentElement.querySelector(".item_tooltip").classList.remove("visible");
+                if(item.parentElement.querySelector(".item_tooltip").classList.contains("is_leaving_bot")){
+                    item.parentElement.querySelector(".item_tooltip").classList.remove("is_leaving_bot");
+                }
+                if(item.parentElement.querySelector(".item_tooltip").classList.contains("is_leaving_bot")){
+                    item.parentElement.querySelector(".item_tooltip").classList.remove("is_leaving_bot");
                 }
             }
         }));

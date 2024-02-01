@@ -1,9 +1,6 @@
 .item_container{
+    position: relative;
     margin: .3em;
-}
-
-.is_leaving{
-    bottom: 2em;
 }
 
 .item_name{
@@ -57,7 +54,7 @@
     padding: .5em;
     visibility: hidden;
     opacity: 0;
-    margin-left: 3em;
+    margin-left: 4em;
     font-family:Arial, Helvetica, sans-serif;
 }
 
@@ -71,10 +68,24 @@
     width: fit-content;
 }
 
+.is_leaving_bot{
+    bottom: 2em;
+}
+
+.is_leaving_right{
+    margin-left: -13em;
+}
+
+.is_leaving_right.medium{
+    margin-left: -18em;
+}
+
+.is_leaving_right.large{
+    margin-left: -25em;
+}
 
 
-
-.image_container:hover .item_tooltip{
+.item_tooltip.visible{
     visibility: visible;
     opacity: 100%;
 }

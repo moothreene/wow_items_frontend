@@ -20,13 +20,30 @@ export default function Item(props){
                 "dps":dps_updated.toFixed(2)
             })
         }
+
+        function size(){
+            let spell_length = 0;
+            if (props.item.spell_desc_1 !== undefined){
+                spell_length = props.item.spell_desc_1.length;
+            }
+            if(props.item.set_id !== 0){
+                return "large";
+            }
+            if(spell_length === 0){
+                return "small";
+            }
+            if(spell_length < 25 ){
+                return "medium";
+            }
+            return "large";
+        }
         return (
             <div class="item_container">
                 <div class={`image_container ${props.item.quality}`}>
                     <div class="shadow"></div>
                     <img class={`item_image ${props.item.quality}`} src={require(`../images/${item}`)} alt="img" />
                     { props.item.name!="default" &&
-                    <div class={`item_tooltip ${props.item.spell_desc_1 == undefined?"small":props.item.spell_desc_1.length > 30?"large":"medium"}`}>
+                    <div class={`item_tooltip ${size()}`}>
                             <div class={`item_name ${props.item.quality}`}>{props.item.name}</div>
                             <div class="item_level">Item Level {props.item.item_level}</div>
                             {
