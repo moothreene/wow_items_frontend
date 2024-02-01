@@ -244,8 +244,8 @@
         width: 2em;
     }
     .item_tooltip.bottom{
-        left:5em;
-        bottom:15em;
+        left:10em;
+        bottom:7em;
         margin: 0;
     }
     .image_container:hover .shadow{
