@@ -70,6 +70,7 @@ abbr {
     height: 3.7em;
     position: absolute;
     z-index: 0;
+    pointer-events: none;
 }
 
 @media all and (max-width: 600px) {
