@@ -236,7 +236,7 @@
 
 @media all and (max-width: 600px) {
     .item_tooltip.right{
-        right: 4em;
+        right: 5em;
     }
     .item_tooltip{
         font-size: .8em;
