@@ -246,7 +246,8 @@
     }
     .item_tooltip.bottom{
         left:10em;
-        bottom:7em;
+        top:45em;
+        bottom:auto;
         margin: 0;
     }
     .image_container:hover .shadow{

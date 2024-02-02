@@ -25,12 +25,19 @@
     position: relative;
     height: fit-content;
 }
+.class_button.hidden{
+    margin: 0;
+}
 
 .spec_button{
     margin: .2em;
     display: flex;
     position: relative;
     height: fit-content;
+}
+
+.spec_button.hidden{
+    margin: 0;
 }
 
 .class_button:hover .shadow{
@@ -76,11 +83,11 @@ abbr {
 @media all and (max-width: 600px) {
     .class_name.options{
         flex-direction: row;
-        width: 100%;
-        justify-content: space-between;
+        width: 90%;
+        margin: auto;
     }
     .select{
-        width: 90%;
+        width: 80%;
         margin: auto;
     }
     .img_orig{
