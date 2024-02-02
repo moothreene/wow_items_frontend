@@ -89,6 +89,7 @@ abbr {
     .select{
         width: 80%;
         margin: auto;
+        padding-right: 1.5em;
     }
     .img_orig{
         width: 1.5em;
