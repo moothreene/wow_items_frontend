@@ -11,7 +11,6 @@ export default function Inventory(props){
                 item.addEventListener("mouseenter",()=>{
                     item.querySelector(".item_tooltip").classList.add("visible");
                     let rect = item.querySelector(".item_tooltip").getBoundingClientRect();
-                    console.log(rect);
                     if(rect["bottom"] > window.innerHeight){
                         item.querySelector(".item_tooltip").classList.add("is_leaving_bot");
                     }

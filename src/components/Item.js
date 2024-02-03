@@ -38,10 +38,12 @@ export default function Item(props){
             return "large";
         }
         return (
+            <>
+            <img src={props.item.image_file}></img>
             <div class="item_container">
                 <div class={`image_container ${props.item.quality}`}>
                     <div class="shadow"></div>
-                    <img class={`item_image ${props.item.quality}`} src={require(`../images/${item}`)} alt="img" />
+                    <img class={`item_image ${props.item.quality}`} src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=${props.item.image}`/*require(`../images/${item}`)*/} alt="img" />
                     { props.item.name!="default" &&
                     <div class={`item_tooltip ${size()} ${props.orientation}`}>
                             <div class={`item_name ${props.item.quality}`}>{props.item.name}</div>
@@ -378,5 +380,6 @@ export default function Item(props){
                     }
                 </div>
             </div>
+            </>
         )
 }

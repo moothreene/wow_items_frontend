@@ -35,7 +35,6 @@ function Bis() {
       <div class="bis">
         <ClassSelect classBis={classBis} loadItems={loadItems}></ClassSelect>
         <Inventory inventory={backendData}></Inventory>
-
     </div>
     </>
   )
