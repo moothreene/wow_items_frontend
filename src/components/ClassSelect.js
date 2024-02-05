@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import "./ClassSelect.css";
 
 function ClassSelect(props) {
+    const prefixUrl = "https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=";
     let specs = [];
     const classInfo = Object.keys(props.classBis["25"]);
     classInfo.forEach((class_name)=>{
@@ -38,10 +39,10 @@ function ClassSelect(props) {
                         <abbr title={class_name.charAt(0).toUpperCase() + class_name.slice(1)}>
                             <div class="class_button" onClick={()=>{handleClassNameClick(class_name)}}>
                                 <div class="select_class img_container">
-                                    <img class = "img_orig" src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=class_${class_name}.jpg`} alt={class_name}></img>
+                                    <img class = "img_orig" src={`${prefixUrl}class_${class_name}.jpg`} alt={class_name}></img>
                                     <div class="shadow"></div>
                                 </div>
-                                <img class = "border" src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=border.png`} alt="border"></img>        
+                                <img class = "border" src={`${prefixUrl}border.png`} alt="border"></img>        
                             </div>
                         </abbr>
                         {Object.keys(props.classBis["25"][class_name]).map((spec)=>{
@@ -49,10 +50,10 @@ function ClassSelect(props) {
                             <abbr title={spec.charAt(0).toUpperCase() + spec.slice(1)}>
                                 <div class={`spec_button ${class_name} ${spec} hidden`} onClick={()=>{handleSpecNameClick(class_name,spec)}}>
                                     <div class="select_spec img_container">
-                                        <img class = "img_orig" src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=spec_${class_name}_${spec}.jpg`}alt={spec}></img>
+                                        <img class = "img_orig" src={`${prefixUrl}spec_${class_name}_${spec}.jpg`}alt={spec}></img>
                                         <div class="shadow"></div>
                                     </div>
-                                    <img class="border" src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=border.png`} alt="border"></img>
+                                    <img class="border" src={`${prefixUrl}border.png`} alt="border"></img>
                                 </div>
                             </abbr>
                             )
@@ -60,69 +61,16 @@ function ClassSelect(props) {
                         <abbr title="Back to class selection">
                             <div class={`spec_button return hidden ${class_name}`} onClick={()=>{handleSpecNameClick(class_name, undefined, true)}}>
                                 <div class="select_back img_container">
-                                    <img class="img_orig" src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=spec_return.jpg`}alt="return"></img>
+                                    <img class="img_orig" src={`${prefixUrl}spec_return.jpg`}alt="return"></img>
                                     <div class="shadow"></div>
                                 </div>
-                                <img class="border" src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=border.png`} alt="border"></img>
+                                <img class="border" src={`${prefixUrl}border.png`} alt="border"></img>
                             </div>
                         </abbr>
                         </>
                     )
                 })
             }
-            {/*
-            <button class="class_button" onClick={()=>{handleClassNameClick("paladin")}}>
-                <img src={require("../images/class_paladin.jpg")} alt="paladin"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("hunter")}}>
-                <img src={require("../images/class_hunter.jpg")} alt="hunter"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("rogue")}}>
-                <img src={require("../images/class_rogue.jpg")} alt="rogue"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("priest")}}>
-                <img src={require("../images/class_priest.jpg")} alt="priest"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("druid")}}>
-                <img src={require("../images/class_druid.jpg")} alt="druid"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("shaman")}}>
-                <img src={require("../images/class_shaman.jpg")} alt="shaman"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("mage")}}>
-                <img src={require("../images/class_mage.jpg")} alt="mage"></img>
-            </button>
-            <button class="class_button" onClick={()=>{handleClassNameClick("warlock")}}>
-                <img src={require("../images/class_warlock.jpg")} alt="warlock"></img>
-            </button>
-        </div>
-        <div class="class_spec options">
-            
-            <button class="spec_button rogue assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button rogue assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button rogue assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            <button class="spec_button assassination hidden">
-                <img src={require("../images/spec_assassination.jpg")}alt="assassination"></img>
-            </button>
-            */}
         </div>
     </div>
   )
