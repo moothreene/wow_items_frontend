@@ -10,6 +10,7 @@ function ClassSelect(props) {
     });
 
     function handleClassNameClick(class_name){
+        props.handleSelectedChange({class_name:class_name, spec:""});
         let class_buttons = document.querySelectorAll(".class_button");
         class_buttons.forEach((el)=>el.classList.toggle("hidden"));
         let specs = document.querySelectorAll(`.spec_button.${class_name}`);
@@ -19,6 +20,7 @@ function ClassSelect(props) {
     }
 
     function handleSpecNameClick(class_name,spec,back=false){
+        props.handleSelectedChange({spec:spec});
         let spec_buttons = document.querySelectorAll(`.spec_button.${class_name}`);
         spec_buttons.forEach((el)=>el.classList.toggle("hidden"));
         let class_buttons = document.querySelectorAll(".class_button");

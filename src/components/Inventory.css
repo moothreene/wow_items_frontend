@@ -55,6 +55,24 @@
     opacity: .3;
 }
 
+.selected_currently{
+    height: 2em;
+    display: flex;
+    width: fit-content;
+    margin: auto;
+    font-family: Metamorphous;
+    color:wheat;
+    font-size: 1.2em;
+}
+
+.class_selected{
+    margin:0 .2em;
+}
+
+.spec_selected{
+    margin: 0 .2em;
+}
+
 @media all and (max-width: 600px) {
     .inventory{
         width: 100%;

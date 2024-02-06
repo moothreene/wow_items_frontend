@@ -8,6 +8,7 @@ import classBis from "../data/Class_bis.json";
 
 function Bis() {
   const [backendData, setBackendData] = useState(icons_default);
+  const [selectedCurrently, setSelectedCurrently] = useState({class_name:"",spec:""});
 
   function loadItems(items){
     for(let [key, value] of Object.entries(items)){
@@ -28,13 +29,17 @@ function Bis() {
     }
   }
 
+  function handleSelectedChange(updatedValue){
+    setSelectedCurrently(selectedCurrently =>({...selectedCurrently,...updatedValue}));
+  }
+
 
   return (
     <>
       <Navbar></Navbar>
       <div class="bis">
-        <ClassSelect classBis={classBis} loadItems={loadItems}></ClassSelect>
-        <Inventory inventory={backendData}></Inventory>
+        <ClassSelect classBis={classBis} loadItems={loadItems} handleSelectedChange={handleSelectedChange}></ClassSelect>
+        <Inventory inventory={backendData} selectedCurrently={selectedCurrently}></Inventory>
     </div>
     </>
   )

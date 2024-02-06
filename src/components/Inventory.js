@@ -35,6 +35,14 @@ export default function Inventory(props){
     try{
         return(
             <div class="inventory">
+                <div class="selected_currently">
+                    <div class={`class_selected ${props.selectedCurrently.class_name}`}>
+                        {props.selectedCurrently.class_name.charAt(0).toUpperCase() + props.selectedCurrently.class_name.slice(1)}
+                     </div>
+                    <div class={`spec_selected ${props.selectedCurrently.class_name}`}>
+                        {props.selectedCurrently.spec.charAt(0).toUpperCase() + props.selectedCurrently.spec.slice(1)}
+                    </div>
+                </div>
                 <div class="columns">
                     <div class="column left">
                     <span class={`item head ${props.inventory["head"]["quality"]}`}>
