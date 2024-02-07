@@ -95,7 +95,7 @@ abbr:has(>.hidden){
 
 @media all and (max-width: 600px) {
     .class_name.options{
-        justify-content: space-between;
+        justify-content: start;
         flex-direction: row;
         width: 90%;
         margin: auto;
@@ -113,26 +113,31 @@ abbr:has(>.hidden){
         height: 2.2em;
     }
     .spec_button .border{
-        left:25%;
+        left:19%;
     }
     .name_container{
-        width: fit-content;
+        width: 100%;
         margin-top: .2em;
         display: flex;
         height: fit-content;
         align-self: auto;
     }
     .name_container span{
+        width: 100%;
         margin: 0;
-        text-align: left;
+        text-align: center;
         font-size: .2em;
     }
     abbr{
         width:fit-content;
         align-items: center;
     }
+    abbr:has(>.class_button){
+        margin-left: 2.1%;
+        margin-right: 2.1%;
+    }
     abbr:has(>.spec_button){
-        width: 20%;
+        width: 15%;
     }
     abbr:has(>.hidden){
         position: fixed;
