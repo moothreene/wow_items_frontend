@@ -8,7 +8,7 @@ import classBis from "../data/Class_bis.json";
 
 function Bis() {
   const [backendData, setBackendData] = useState(icons_default);
-  const [selectedCurrently, setSelectedCurrently] = useState({class_name:"",spec:""});
+  const [selectedCurrently, setSelectedCurrently] = useState({class_name:"",spec:"",class_prev:"",spec_prev:""});
 
   function loadItems(items){
     for(let [key, value] of Object.entries(items)){
@@ -30,8 +30,22 @@ function Bis() {
   }
 
   function handleSelectedChange(updatedValue){
-    setSelectedCurrently(selectedCurrently =>({...selectedCurrently,...updatedValue}));
+    if(updatedValue["spec"]!=""){
+      setSelectedCurrently(selectedCurrently =>({...selectedCurrently,
+                                                  spec_prev:updatedValue["spec"],
+                                                  class_prev:selectedCurrently["class_name"],
+                                                  spec:updatedValue["spec"]
+                                                }));
+    }else if(updatedValue["class_name"]!=""){
+      setSelectedCurrently(selectedCurrently =>({...selectedCurrently,...updatedValue}));
+    }else{
+      setSelectedCurrently(selectedCurrently =>({...selectedCurrently,
+                                                  class_name:selectedCurrently["class_prev"],
+                                                  spec:selectedCurrently["spec_prev"]
+                                                }))
+    }
   }
+
 
 
   return (
