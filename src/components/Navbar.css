@@ -1,32 +1,37 @@
 .navbar{
     position: relative;
     display: flex;
-    width: 40%;
+    width: 43.1%;
     height: fit-content;
-    margin: auto;
+    margin-left:35.2%;
+    margin-right: 21.6%;
     margin-top: 1em;
-    justify-content: flex-end;
+    justify-content: center;
+    padding-bottom: 1em;
 }
 
 .link_container{
     text-align: center;
     width: 30%;
     font-size: 2em;
-}
-
-.link_container a{
+    margin: 0 .1em;
+    background-color: rgb(32, 81, 81);
     font-family: Metamorphous;
     text-decoration: none;
     color:wheat;
 }
 
-.link_container a:hover{
+
+.link_container:hover{
     color:brown;
+    background-color: rgb(29, 52, 67)
 }
 
 @media all and (max-width: 600px) {
     .navbar{
         width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
     }
     .link_container{
         width: 50%;

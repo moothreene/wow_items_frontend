@@ -4,12 +4,8 @@ import "./Navbar.css";
 function Navbar() {
   return (
     <div class="navbar">
-      <div class="link_container">
-        <a href="/">HOME</a>
-      </div>
-      <div class="link_container">
-        <a href="/bis">BIS</a>
-      </div>  
+      <a class="link_container" href="/">HOME</a>
+      <a class="link_container" href="/bis">BIS</a>   
     </div>
   )
 }

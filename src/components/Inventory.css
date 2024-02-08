@@ -38,9 +38,12 @@
 }
 
 .inventory{
-    width: 60%;
+    width: 65%;
     justify-content: space-between;
     margin: auto;
+    padding: .4em 1em 10em 1em;
+    border:2px black solid;
+    background-color: rgb(30,30,30);
 }
 
 .row.bottom .item{
@@ -58,8 +61,9 @@
 .selected_currently{
     height: 2em;
     display: flex;
-    width: fit-content;
-    margin: auto;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
     font-family: Metamorphous;
     color:wheat;
     font-size: 1.2em;
@@ -75,10 +79,11 @@
 
 @media all and (max-width: 600px) {
     .inventory{
-        width: 100%;
+        width: 95%;
         margin-top: 1em;
+        padding: .4em .3em 1em .3em;
     }
     .item{
-        font-size: .8em;
+        font-size: .7em;
     }
 }

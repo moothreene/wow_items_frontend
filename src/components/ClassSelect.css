@@ -1,7 +1,7 @@
 .select{
     display: flex;
-    width: 10%;
-    margin-left: 2em;
+    width: 17%;
+    margin-top: 1em;
 }
 
 .class_name.options{
@@ -105,15 +105,17 @@ abbr:has(>.hidden){
         margin: auto;
     }
     .img_orig{
-        width: 1.6em;
-        height: 1.6em;
+        width: 7vw;
+        height: 7vw;
     }
     .border{
-        width: 2.2em;
-        height: 2.2em;
+        top:-.65vw;
+        left:-.75vw;
+        width: 8.5vw;
+        height: 8.5vw;
     }
     .spec_button .border{
-        left:19%;
+        left: 2.1vw;
     }
     .name_container{
         width: 100%;
@@ -133,8 +135,8 @@ abbr:has(>.hidden){
         align-items: center;
     }
     abbr:has(>.class_button){
-        margin-left: 2.1%;
-        margin-right: 2.1%;
+        margin-left: .3em;
+        margin-right: .3em;
     }
     abbr:has(>.spec_button){
         width: 15%;
