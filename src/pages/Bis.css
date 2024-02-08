@@ -23,6 +23,17 @@ select{
     width: 100%;
     appearance: none;
 }
+@media all and (max-width: 900px) {
+    .bis{
+        width: 90%;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .bis{
+        width: 95%;
+    }
+}
 
 @media all and (max-width: 600px) {
     .bis{

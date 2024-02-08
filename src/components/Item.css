@@ -249,8 +249,8 @@
         width: 2em;
     }
     .item_tooltip.bottom{
-        left:10em;
-        top:55em;
+        left:15em;
+        top:min(calc(100vh - 25em),55em);
         bottom:auto;
         margin: 0;
     }
