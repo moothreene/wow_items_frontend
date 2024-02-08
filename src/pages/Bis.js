@@ -7,7 +7,7 @@ import "./Bis.css"
 import classBis from "../data/Class_bis.json";
 
 function Bis() {
-  const [backendData, setBackendData] = useState(icons_default);
+  const [inventoryData, setInventoryData] = useState(icons_default);
   const [selectedCurrently, setSelectedCurrently] = useState({class_name:"",spec:"",class_prev:"",spec_prev:""});
 
   function loadItems(items){
@@ -23,7 +23,7 @@ function Bis() {
       ).then(
         data=>{
           if(value.length > 1) data["desc"] = value[1];
-          setBackendData(backendData =>({...backendData,[key]:data}))
+          setInventoryData(inventoryData =>({...inventoryData,[key]:data}))
         }
       )
     }
@@ -53,7 +53,7 @@ function Bis() {
       <Navbar></Navbar>
       <div className="bis">
         <ClassSelect classBis={classBis} loadItems={loadItems} handleSelectedChange={handleSelectedChange}></ClassSelect>
-        <Inventory inventory={backendData} selectedCurrently={selectedCurrently}></Inventory>
+        <Inventory inventory={inventoryData} selectedCurrently={selectedCurrently}></Inventory>
     </div>
     </>
   )
