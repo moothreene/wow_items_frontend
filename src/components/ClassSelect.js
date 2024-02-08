@@ -34,8 +34,8 @@ function ClassSelect(props) {
     }
 
     return (
-    <div class="select">
-        <div class="class_name options">
+    <div className="select">
+        <div className="class_name options">
             {
                 classInfo.map((class_name)=>{
                     return(
@@ -60,10 +60,10 @@ function ClassSelect(props) {
                                         <img class = "img_orig" src={`${prefixUrl}spec_${class_name}_${spec}.jpg`}alt={spec}></img>
                                         <div class="shadoweff"></div>
                                     </div>
-                                    <img class="border" src={`${prefixUrl}border.png`} alt="border"></img>
-                                    <div class="name_container">
-                                        <span>{spec.charAt(0).toUpperCase() + spec.slice(1)}</span>
-                                    </div> 
+                                    <img className = "border" src={`${prefixUrl}border.png`} alt="border"></img>
+                                    <div className="name_container">
+                                        <span>{class_name.charAt(0).toUpperCase() + class_name.slice(1)}</span>
+                                    </div>     
                                 </div>
                             </abbr>
                             )

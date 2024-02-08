@@ -34,31 +34,31 @@ export default function Inventory(props){
 
     try{
         return(
-            <div class="inventory">
-                <div class="selected_currently">
+            <div className="inventory">
+                <div className="selected_currently">
                     {
                         props.selectedCurrently.class_name !="" &&
-                        <div class={`class_selected ${props.selectedCurrently.class_name}`}>
+                        <div className={`class_selected ${props.selectedCurrently.class_name}`}>
                             {props.selectedCurrently.class_name.charAt(0).toUpperCase() + props.selectedCurrently.class_name.slice(1)}
                         </div>
                     }
                      {
                         props.selectedCurrently.spec !="" &&
-                        <div class={`spec_selected ${props.selectedCurrently.class_name}`}>
+                        <div className={`spec_selected ${props.selectedCurrently.class_name}`}>
                             {props.selectedCurrently.spec.charAt(0).toUpperCase() + props.selectedCurrently.spec.slice(1)}
                         </div>
                     }
                 </div>
-                <div class="columns">
-                    <div class="column left">
-                    <span class={`item head ${props.inventory["head"]["quality"]}`}>
+                <div className="columns">
+                    <div className="column left">
+                    <span className={`item head ${props.inventory["head"]["quality"]}`}>
                             <Item item={props.inventory["head"]} orientation="left"></Item>
                             {props.inventory["head"]["name"]!="default"&& props.inventory["head"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["head"] && ` (${props.inventory["head"]["desc"]})`}
                         </span>
                         
-                        <span class={`item neck ${props.inventory["neck"]["quality"]}`}>
+                        <span className={`item neck ${props.inventory["neck"]["quality"]}`}>
                             <Item item={props.inventory["neck"]} orientation="left"></Item>
                             {props.inventory["neck"]["name"]!="default"&& props.inventory["neck"]["name"]}
                             <br></br>
@@ -66,7 +66,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item shoulder ${props.inventory["shoulder"]["quality"]}`}>
+                        <span className={`item shoulder ${props.inventory["shoulder"]["quality"]}`}>
                             <Item item={props.inventory["shoulder"]} orientation="left"></Item>
                             {props.inventory["shoulder"]["name"]!="default"&& props.inventory["shoulder"]["name"]}
                             <br></br>
@@ -74,7 +74,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item back ${props.inventory["back"]["quality"]}`}>
+                        <span className={`item back ${props.inventory["back"]["quality"]}`}>
                             <Item item={props.inventory["back"]} orientation="left"></Item>
                             {props.inventory["back"]["name"]!="default"&& props.inventory["back"]["name"]}
                             <br></br>
@@ -82,7 +82,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item chest ${props.inventory["chest"]["quality"]}`}>
+                        <span className={`item chest ${props.inventory["chest"]["quality"]}`}>
                             <Item item={props.inventory["chest"]} orientation="left"></Item>
                             {props.inventory["chest"]["name"]!="default"&& props.inventory["chest"]["name"]}
                             <br></br>
@@ -90,7 +90,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item wrist ${props.inventory["wrist"]["quality"]}`}>
+                        <span className={`item wrist ${props.inventory["wrist"]["quality"]}`}>
                             <Item item={props.inventory["wrist"]} orientation="left"></Item>
                             {props.inventory["wrist"]["name"]!="default"&& props.inventory["wrist"]["name"]}
                             <br></br>
@@ -98,7 +98,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item hands ${props.inventory["hands"]["quality"]}`}>
+                        <span className={`item hands ${props.inventory["hands"]["quality"]}`}>
                             <Item item={props.inventory["hands"]} orientation="left"></Item>
                             {props.inventory["hands"]["name"]!="default"&& props.inventory["hands"]["name"]}
                             <br></br>
@@ -106,15 +106,15 @@ export default function Inventory(props){
                         </span>
                     </div>
 
-                    <div class="column right">
-                    <span class={`item waist ${props.inventory["waist"]["quality"]}`}>
+                    <div className="column right">
+                    <span className={`item waist ${props.inventory["waist"]["quality"]}`}>
                             {props.inventory["waist"]["name"]!="default"&& props.inventory["waist"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["waist"] && ` (${props.inventory["waist"]["desc"]})`}
                             <Item item={props.inventory["waist"]} orientation="right"></Item>
                         </span>
                         
-                        <span class={`item legs ${props.inventory["legs"]["quality"]}`}>
+                        <span className={`item legs ${props.inventory["legs"]["quality"]}`}>
                             {props.inventory["legs"]["name"]!="default"&& props.inventory["legs"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["legs"] && ` (${props.inventory["legs"]["desc"]})`}
@@ -122,7 +122,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item feet ${props.inventory["feet"]["quality"]}`}>
+                        <span className={`item feet ${props.inventory["feet"]["quality"]}`}>
                             {props.inventory["feet"]["name"]!="default"&& props.inventory["feet"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["feet"] && ` (${props.inventory["feet"]["desc"]})`}
@@ -130,7 +130,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item ring_1 ${props.inventory["ring_1"]["quality"]}`}>
+                        <span className={`item ring_1 ${props.inventory["ring_1"]["quality"]}`}>
                             {props.inventory["ring_1"]["name"]!="default"&& props.inventory["ring_1"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["ring_1"] && ` (${props.inventory["ring_1"]["desc"]})`}
@@ -138,7 +138,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item ring_2 ${props.inventory["ring_2"]["quality"]}`}>
+                        <span className={`item ring_2 ${props.inventory["ring_2"]["quality"]}`}>
                             {props.inventory["ring_2"]["name"]!="default"&& props.inventory["ring_2"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["ring_2"] && ` (${props.inventory["ring_2"]["desc"]})`}
@@ -146,7 +146,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item trinket_1 ${props.inventory["trinket_1"]["quality"]}`}>
+                        <span className={`item trinket_1 ${props.inventory["trinket_1"]["quality"]}`}>
                             {props.inventory["trinket_1"]["name"]!="default"&& props.inventory["trinket_1"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["trinket_1"] && ` (${props.inventory["trinket_1"]["desc"]})`}
@@ -154,7 +154,7 @@ export default function Inventory(props){
                         </span>
                         
 
-                        <span class={`item trinket_2 ${props.inventory["trinket_2"]["quality"]}`}>
+                        <span className={`item trinket_2 ${props.inventory["trinket_2"]["quality"]}`}>
                             {props.inventory["trinket_2"]["name"]!="default"&& props.inventory["trinket_2"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["trinket_2"] && ` (${props.inventory["trinket_2"]["desc"]})`}
@@ -162,15 +162,15 @@ export default function Inventory(props){
                         </span>
                     </div>
                 </div>
-                <div class="rows">
-                    <div class="row bottom">
-                        <span class={`item mainhand ${props.inventory["mainhand"]["quality"]}`}>
+                <div className="rows">
+                    <div className="row bottom">
+                        <span className={`item mainhand ${props.inventory["mainhand"]["quality"]}`}>
                             <Item item={props.inventory["mainhand"]} orientation="bottom"></Item>
                             {props.inventory["mainhand"]["name"]!="default"&& props.inventory["mainhand"]["name"]}
                             <br></br>
                             {"desc" in props.inventory["mainhand"] && ` (${props.inventory["mainhand"]["desc"]})`}
                         </span>
-                        <span class={
+                        <span className={
                             `item offhand ${props.inventory["offhand"]["quality"]} ${
                                 (props.inventory["offhand"]["id"] == props.inventory["mainhand"]["id"] &&
                                 props.inventory["offhand"]["name"] != "default")?"two-hand":""
@@ -181,7 +181,7 @@ export default function Inventory(props){
                             <br></br>
                             {"desc" in props.inventory["offhand"] && ` (${props.inventory["offhand"]["desc"]})`}
                         </span>
-                        <span class={`item misc ${props.inventory["misc"]["quality"]}`}>
+                        <span className={`item misc ${props.inventory["misc"]["quality"]}`}>
                             <Item item={props.inventory["misc"]} orientation="bottom"></Item>
                             {props.inventory["misc"]["name"]!="default"&& props.inventory["misc"]["name"]}
                             <br></br>

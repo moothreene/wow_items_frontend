@@ -51,7 +51,7 @@ function Bis() {
   return (
     <>
       <Navbar></Navbar>
-      <div class="bis">
+      <div className="bis">
         <ClassSelect classBis={classBis} loadItems={loadItems} handleSelectedChange={handleSelectedChange}></ClassSelect>
         <Inventory inventory={backendData} selectedCurrently={selectedCurrently}></Inventory>
     </div>
