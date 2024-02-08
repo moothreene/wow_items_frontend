@@ -16,7 +16,6 @@ code {
 
 body, html {
   user-select: none;
-  overflow: clip;
 }
 
 #root{

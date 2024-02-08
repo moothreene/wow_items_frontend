@@ -41,9 +41,8 @@
     width: 65%;
     justify-content: space-between;
     margin: auto;
-    padding: .4em 1em 10em 1em;
-    border:2px black solid;
-    background-color: rgb(30,30,30);
+    padding: .4em 1em 1em 1em;
+    background-color: rgb(26,26,26);
 }
 
 .row.bottom .item{
