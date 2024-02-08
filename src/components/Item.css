@@ -208,6 +208,10 @@
     color:rgb(135, 137, 238);
 }
 
+.class_comma{
+    color:white;
+}
+
 .random_enchantment{
     white-space: nowrap;
     color:lawngreen;
@@ -246,7 +250,7 @@
     }
     .item_tooltip.bottom{
         left:10em;
-        top:45em;
+        top:55em;
         bottom:auto;
         margin: 0;
     }

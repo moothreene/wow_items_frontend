@@ -211,9 +211,11 @@ export default function Item(props){
                                     {
                                         props.item.class_available.toString().split("").map((class_id,i,arr)=>{
                                             return(
-                                                <>
-                                                <span class={`class_available ${classId[class_id]}`}>
+                                                <span key = {i} className={`class_available ${classId[class_id]}`}>
                                                     {classId[class_id].charAt(0).toUpperCase() + classId[class_id].slice(1)}
+                                                    {arr.length - 1 != i &&
+                                                    <span className="class_comma">, </span>
+                                                    }
                                                 </span>
                                             )
                                         })
