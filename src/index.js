@@ -5,15 +5,35 @@ import './index.css';
 import Bis from './pages/Bis';
 import Nopage from './pages/NoPage';
 import Home from './pages/Home';
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
+import Layout from './components/Layout';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
     <Routes>
-      <Route index element = {<Home />} />
-      <Route path="bis" element={<Bis />} />
-      <Route path="*" element={<Nopage />} />
+      <Route path="/" element={<Layout />}>
+
+        <Route index element = {
+          <Home />
+        } />
+
+        <Route path="bis" element={  
+          <Bis />
+        } />
+
+        <Route path="login" element={
+          <Login />
+        } />
+
+        <Route path="register" element={
+          <Register />
+        } />
+
+      </Route>
     </Routes>
   </BrowserRouter>
 
