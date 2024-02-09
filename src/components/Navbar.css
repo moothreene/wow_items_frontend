@@ -1,19 +1,16 @@
 .navbar{
     position: relative;
     display: flex;
-    width: 43.1%;
     height: fit-content;
-    margin-left:35.2%;
-    margin-right: 21.6%;
-    margin-top: 1em;
-    justify-content: center;
+    margin: 1em 10%;
+    justify-content: left;
     padding-bottom: 1em;
 }
 
 .link_container{
     text-align: center;
     width: 5em;
-    font-size: 2em;
+    font-size: 1.5em;
     margin: 0 .1em;
     background-color: rgb(32, 81, 81);
     font-family: Metamorphous;

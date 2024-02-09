@@ -72,17 +72,8 @@
 }
 
 .item_tooltip.right{
-    margin-left: -13em;
+    right: 22%;
 }
-
-.item_tooltip.right.medium{
-    margin-left: -17em;
-}
-
-.item_tooltip.right.large{
-    margin-left: -23em;
-}
-
 
 .item_tooltip.visible{
     visibility: visible;
@@ -91,7 +82,7 @@
 
 .item_tooltip.bottom{
     margin-left: -5em;
-    bottom: 12em;
+    top:20em;
 }
 
 
@@ -240,7 +231,7 @@
 
 @media all and (max-width: 600px) {
     .item_tooltip.right{
-        right: 5em;
+        right: 6em;
     }
     .item_tooltip{
         font-size: .8em;
