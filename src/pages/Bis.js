@@ -1,6 +1,5 @@
 import React, {useState} from 'react'
 import Inventory from '../components/Inventory';
-import Navbar from '../components/Navbar';
 import ClassSelect from '../components/ClassSelect';
 import icons_default from "../data/Icons_default";
 import "./Bis.css"
@@ -49,13 +48,10 @@ function Bis() {
 
 
   return (
-    <>
-      <Navbar></Navbar>
       <div className="bis">
         <ClassSelect classBis={classBis} loadItems={loadItems} handleSelectedChange={handleSelectedChange}></ClassSelect>
         <Inventory inventory={inventoryData} selectedCurrently={selectedCurrently}></Inventory>
-    </div>
-    </>
+      </div>
   )
 }
 
