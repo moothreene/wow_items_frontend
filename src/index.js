@@ -10,10 +10,12 @@ import Register from './pages/Register';
 import Navbar from './components/Navbar';
 import reportWebVitals from './reportWebVitals';
 import Layout from './components/Layout';
+import { UserContextProvider } from './components/UserContext';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
+    <UserContextProvider>
     <Routes>
       <Route path="/" element={<Layout />}>
 
@@ -35,6 +37,7 @@ root.render(
 
       </Route>
     </Routes>
+    </UserContextProvider>
   </BrowserRouter>
 
 );
