@@ -2,20 +2,34 @@
     position: relative;
     display: flex;
     height: fit-content;
-    margin: 1em 10%;
-    justify-content: left;
-    padding-bottom: 1em;
+    width: 80%;
+    margin: 1em auto;
+    justify-content: space-between;
+}
+.links{
+    display: flex;
 }
 
 .link_container{
     text-align: center;
     width: 5em;
+    height: 1.5em;
     font-size: 1.5em;
     margin: 0 .1em;
     background-color: rgb(32, 81, 81);
     font-family: Metamorphous;
     text-decoration: none;
     color:wheat;
+}
+
+.auth_info{
+    display: flex;
+    color:wheat;
+    font-size: 1.5em;
+}
+
+.auth_info div{
+    margin-right: 1em;
 }
 
 
