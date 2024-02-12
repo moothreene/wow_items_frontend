@@ -11,8 +11,10 @@
 }
 
 .link_container{
+    display: block;
     text-align: center;
-    width: 5em;
+    padding-top: .1em;
+    width: 6em;
     height: 1.5em;
     font-size: 1.5em;
     margin: 0 .1em;
@@ -25,13 +27,12 @@
 .auth_info{
     display: flex;
     color:wheat;
-    font-size: 1.5em;
 }
 
-.auth_info div{
+.auth_info .username{
+    font-size: 1.5em;
     margin-right: 1em;
 }
-
 
 .link_container:hover{
     color:brown;
