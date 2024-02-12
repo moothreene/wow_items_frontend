@@ -3,6 +3,9 @@ import "./Item.css"
 import itemLocalization from "../ItemLocalisation.json";
 import classId from "../data/Class_id.json";
 
+import serverLink from '../data/defaults';
+const {serverLink:prefix} = serverLink;
+
 export default function Item(props){
         const item = props.item.image;
         const speed = props.item.speed!=undefined?+props.item.speed.replace(",","."):0.0;
@@ -43,7 +46,7 @@ export default function Item(props){
             <div className="item_container">
                 <div className={`image_container ${props.item.quality}`}>
                     <div className="shadow"></div>
-                    <img className={`item_image ${props.item.quality}`} src={`https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=${props.item.image}`/*require(`../images/${item}`)*/} alt="img" />
+                    <img className={`item_image ${props.item.quality}`} src={`${prefix}/images/${props.item.image}`/*require(`../images/${item}`)*/} alt="img" />
                     { props.item.name!="default" &&
                     <div className={`item_tooltip ${size()} ${props.orientation}`}>
                             <div className={`item_name ${props.item.quality}`}>{props.item.name}</div>

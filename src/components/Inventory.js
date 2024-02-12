@@ -5,7 +5,7 @@ import "./Inventory.css";
 export default function Inventory(props){
 
     useEffect(() => {
-        let items = document.querySelectorAll('.image_container');
+        const items = document.querySelectorAll('.image_container');
         items.forEach((item)=> {
             if(!item.classList.contains("undefined")){
                 item.addEventListener("mouseenter",()=>{

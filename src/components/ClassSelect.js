@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 import "./ClassSelect.css";
 
+import serverLink from '../data/defaults';
+const {serverLink:prefix} = serverLink;
+
+
 function ClassSelect(props) {
-    const prefixUrl = "https://wow-item-backend-752ca682c8fc.herokuapp.com/img?src=";
     let specs = [];
     const classInfo = Object.keys(props.classBis["25"]);
     classInfo.forEach((class_name)=>{
@@ -43,10 +46,10 @@ function ClassSelect(props) {
                             <abbr className = {class_name} title={class_name.charAt(0).toUpperCase() + class_name.slice(1)}>
                                 <div className="class_button" onClick={()=>{handleClassNameClick(class_name)}}>
                                     <div className="select_class img_container">
-                                        <img className = "img_orig" src={`${prefixUrl}class_${class_name}.jpg`} alt={class_name}></img>
+                                        <img className = "img_orig" src={`${prefix}/images/class_${class_name}.jpg`} alt={class_name}></img>
                                         <div className="shadoweff"></div>
                                     </div>
-                                    <img className = "border" src={`${prefixUrl}border.png`} alt="border"></img>
+                                    <img className = "border" src={`${prefix}/images/border.png`} alt="border"></img>
                                     <div className="name_container">
                                         <span>{class_name.charAt(0).toUpperCase() + class_name.slice(1)}</span>
                                     </div>     
@@ -57,10 +60,10 @@ function ClassSelect(props) {
                                 <abbr key={index} title={spec.charAt(0).toUpperCase() + spec.slice(1)}>
                                     <div className={`spec_button ${class_name} ${spec} hidden`} onClick={()=>{handleSpecNameClick(class_name,spec)}}>
                                         <div className="select_spec img_container">
-                                            <img className = "img_orig" src={`${prefixUrl}spec_${class_name}_${spec}.jpg`}alt={spec}></img>
+                                            <img className = "img_orig" src={`${prefix}/images/spec_${class_name}_${spec}.jpg`}alt={spec}></img>
                                             <div className="shadoweff"></div>
                                         </div>
-                                        <img className="border" src={`${prefixUrl}border.png`} alt="border"></img>
+                                        <img className="border" src={`${prefix}/images/border.png`} alt="border"></img>
                                         <div className="name_container">
                                             <span>{spec.charAt(0).toUpperCase() + spec.slice(1)}</span>
                                         </div> 
@@ -71,10 +74,10 @@ function ClassSelect(props) {
                             <abbr title="Back to className selection">
                                 <div className={`spec_button return hidden ${class_name}`} onClick={()=>{handleSpecNameClick(class_name, undefined, true)}}>
                                     <div className="select_back img_container">
-                                        <img className="img_orig" src={`${prefixUrl}spec_return.jpg`}alt="return"></img>
+                                        <img className="img_orig" src={`${prefix}/images/spec_return.jpg`}alt="return"></img>
                                         <div className="shadoweff"></div>
                                     </div>
-                                    <img className="border" src={`${prefixUrl}border.png`} alt="border"></img>
+                                    <img className="border" src={`${prefix}/images/border.png`} alt="border"></img>
                                 </div>
                             </abbr>
                         </div>
