@@ -1,0 +1,10 @@
+.post_page .image{
+    max-height: 15em;
+    display: flex;
+    overflow: hidden;
+}
+
+.post_page .image img{
+    object-fit: cover;
+    object-position: center center;
+}
