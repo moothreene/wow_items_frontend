@@ -2,15 +2,18 @@ import React, { useContext, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import './Auth.css';
 import { UserContext } from '../components/UserContext';
+import serverLink from '../data/defaults';
+const {serverLink:prefix} = serverLink;
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [redirect, setRedirect] = useState(false);
   const {setUserInfo} = useContext(UserContext);
+  
   async function login(e){
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/login",{
+    const response = await fetch(`${prefix}/login`,{
       method: "POST",
       body: JSON.stringify({username,password}),
       headers: {'Content-type':'application/json'},
