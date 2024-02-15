@@ -11,6 +11,8 @@ import reportWebVitals from './reportWebVitals';
 import Layout from './components/Layout';
 import { UserContextProvider } from './components/UserContext';
 import AddNews from './pages/AddNews';
+import PostPage from './pages/PostPage';
+import EditNews from './pages/EditNews';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,31 +20,14 @@ root.render(
     <UserContextProvider>
     <Routes>
       <Route path="/" element={<Layout />}>
-
-        <Route index element = {
-          <Home />
-        } />
-
-        <Route path="bis" element={  
-          <Bis />
-        } />
-
-        <Route path="login" element={
-          <Login />
-        } />
-
-        <Route path="register" element={
-          <Register />
-        } />
-
-        <Route path="add" element={
-          <AddNews />
-        } />
-
-        <Route path="*" element={
-          <Nopage />
-        } />
-
+        <Route index element = {<Home />} />
+        <Route path="bis" element={<Bis />} />
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
+        <Route path="add" element={<AddNews />} />
+        <Route path="post/:id" element={<PostPage/>} />
+        <Route path="edit/:id" element={<EditNews />} />
+        <Route path="*" element={<Nopage />} />
       </Route>
     </Routes>
     </UserContextProvider>
