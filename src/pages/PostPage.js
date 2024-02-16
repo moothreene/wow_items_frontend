@@ -55,7 +55,7 @@ function PostPage() {
             <div className='image'>
                 <img src={`${prefix}/${postInfo.cover}`}/>
             </div>
-            <div dangerouslySetInnerHTML={{__html:postInfo.content}}/>
+            <div className="post_content" dangerouslySetInnerHTML={{__html:postInfo.content}}/>
         </div>
   )
 }
