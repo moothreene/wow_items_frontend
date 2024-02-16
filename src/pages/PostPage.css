@@ -1,3 +1,10 @@
+.post_page{
+    width: 90%;
+    margin: auto;
+    margin-bottom: 2em;
+    color:wheat;
+}
+
 .post_page .image{
     max-height: 15em;
     display: flex;
@@ -7,4 +14,35 @@
 .post_page .image img{
     object-fit: cover;
     object-position: center center;
+}
+div.post_content a{
+    text-decoration: none;
+    color:coral;
+}
+
+div.post_content a:hover{
+    color:brown;
+}
+
+.post_content *{
+    margin: 0;
+}
+
+div.edit a{
+    color:coral;
+    text-decoration: none;
+}
+
+div.edit a:hover{
+    color:brown;
+
+}
+
+div.delete{
+    color:coral;
+    cursor: pointer;
+}
+
+div.delete:hover{
+    color:brown;
 }
