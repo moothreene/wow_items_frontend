@@ -1,0 +1,13 @@
+.nopage{
+    color:wheat;
+    width: 80%;
+    margin: auto;
+}
+
+.nopage_title{
+    text-align: center;
+}
+
+div.nopage p{
+    text-align: center;
+}
