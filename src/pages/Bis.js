@@ -4,6 +4,8 @@ import ClassSelect from '../components/ClassSelect';
 import icons_default from "../data/Icons_default";
 import "./Bis.css"
 import classBis from "../data/Class_bis.json";
+import serverLink from '../data/defaults';
+const {serverLink:prefix} = serverLink;
 
 function Bis() {
   const [inventoryData, setInventoryData] = useState(icons_default);
@@ -11,7 +13,7 @@ function Bis() {
 
   function loadItems(items){
     for(let [key, value] of Object.entries(items)){
-      fetch(`https://wow-item-backend-752ca682c8fc.herokuapp.com/api?id=${+value[0]}`,{
+      fetch(`${prefix}/api?id=${+value[0]}`,{
         mode:"cors",
         method:'GET',
         headers:{
