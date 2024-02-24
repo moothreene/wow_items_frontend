@@ -3,7 +3,6 @@ import "./Navbar.css";
 import {Link} from "react-router-dom"
 import { UserContext } from './UserContext';
 import serverLink from '../data/defaults';
-
 const {serverLink:prefix} = serverLink;
 
 function Navbar(){
