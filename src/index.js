@@ -15,10 +15,6 @@ import AddNews from './pages/AddNews';
 import PostPage from './pages/PostPage';
 import EditNews from './pages/EditNews';
 
-useEffect(() => {
-  document.title = 'Best in Slot';
-}, []);
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
