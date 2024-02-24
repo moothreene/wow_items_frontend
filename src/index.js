@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import {BrowserRouter, Routes, Route} from "react-router-dom"
 import './index.css';
@@ -13,6 +14,10 @@ import { UserContextProvider } from './components/UserContext';
 import AddNews from './pages/AddNews';
 import PostPage from './pages/PostPage';
 import EditNews from './pages/EditNews';
+
+useEffect(() => {
+  document.title = 'Best in Slot';
+}, []);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
