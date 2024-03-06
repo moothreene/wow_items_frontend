@@ -7,4 +7,5 @@ You can see it in action here (https://wow-item-frontend-379b28d1a268.herokuapp.
 Log in using these credentials:
 
  **user1**
+ 
  **pass1**
